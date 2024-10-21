@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Management System</title>
+       
+     <style>
+             body{
+                 font-family: Arial, sans-serif;
+                 background-color: #f4f4;
+                 margin: 0;
+                 padding: 0;
+             }
+
+             .container {
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             }
+
+             h1{
+                 text-align: center;
+                 color: #333;
+             }
+
+             .form-container {
+                   display: flex;
+                   justify-content: space-between;
+                   margin-bottom: 20px;
+             }
+
+             .form-container input {
+                 flex: 1;
+                 padding: 10px;
+                 margin-right: 10px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;
+             }
+
+              .form-container button {
+                padding: 10px 20px;
+                background-color: #28a745;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+               }
+
+               .form-container button:hover {
+                 background-color: #218838;
+               }
+
+               .book-list h2 {
+                  margin-top: 0;
+                  color: #333; 
+               }
+
+                .book-list ul{
+                    list-style-type: none;
+                    padding: 0;
+                }
+
+               .book-list li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 200px solid #ccc;
+               } 
+
+               .book-list li button{
+                   background-color: #dc3545;
+                   color: white;
+                   border: none;
+                   border-radius: 4px;
+                   cursor: pointer;
+               }
+
+               .book-listli button:hover {
+                 background-color: #c82333;
+               }
+     </style>
+</head>
+<body>
+         <div class="container">
+          <h1>Libarary Book Management System</h1>
+            <div class="form-container">
+                <input type="text" id="booktitle" placeholder="Book Title">
+                <input type="text" id="bookauthor" placeholder="Book author">
+                <button onclick="addBook()">Add Book</button>
+            </div>
+
+            <div class="book-list">
+                <h2>Book List</h2>
+                <ul id="bookList"></ul>
+            </div>
+
+             <div class="book-list">
+                <h3>Book List</h3>
+                 <li id="book-list"></li>
+                 <button onclick="addbook">Add Book</button>
+             </div>
+    </div>
+
+     <script>
+      
+        
+         function addBook() {
+            const bookTitle = document.getElementById('booktitle').value;
+           
+            const bookAuthor = document.getElementById('bookauthor').value;
+            alert('Books Details added');
+
+            document.getElementById('bookList').innerHTML=`${bookTitle +" "+bookAuthor }`
+            
+
+          
+        }
+
+       
+         
+
+
+        
+     </script>
+</body>
+</html>
